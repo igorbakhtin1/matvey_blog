@@ -1,0 +1,15 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="main-container">
+	<form method="POST" action="">
+		{% csrf_token %}
+
+		<p>Вы уверены, что хотите удалить запись {{item}}?</p>
+		<a class="btn btn-primary" href="{% url 'posts' %}">&laquo Назад</a>
+		<input class="btn btn-danger" type="submit" value="Согласен">
+	</form>
+</div>
+
+{% endblock content %}
